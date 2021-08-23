@@ -1,0 +1,310 @@
+html,
+body {
+  justify-items: center;
+  align-self: center;
+  background: #373737;
+}
+#form #inputBox,
+#inputBox2,
+#inputBox3,
+#inputBox4,
+#inputBox5 {
+  position: relative;
+}
+.fas {
+  color: aliceblue;
+}
+.show {
+  position: absolute;
+  margin-left: 180px;
+  font-size: 12px;
+  font-weight: 900;
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: none;
+}
+.form-check {
+  margin-left: -86px;
+  color: rgb(248, 248, 248);
+}
+.show.active {
+  color: #27ae60;
+}
+
+#text {
+  text-align: center;
+
+  display: none;
+}
+
+form button {
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: no-drop;
+  opacity: 0.7;
+  transform: all 0.3s;
+}
+form button.active {
+  cursor: pointer;
+  opacity: 1;
+  transform: all 0.3s;
+}
+form button.active:hover {
+  background-color: #219150 !important;
+  color: rgb(57, 176, 223) !important;
+  font-weight: 700;
+}
+
+#text,
+#text_1,
+#text_2,
+#text_3,
+#text_4 {
+  display: block;
+  color: #000;
+  font-weight: 400;
+  font-style: italic;
+  padding: 5px;
+  left: 20px;
+  position: absolute;
+  top: 105%;
+  left: 43%;
+}
+
+#form.invalid #inputBox:before,
+#form.invalid2 #inputBox2:before {
+  content: "";
+  position: absolute;
+  left: 56%;
+  width: 24px;
+  height: 24px;
+  background: url("../img/invalid.png");
+  background-size: cover;
+  z-index: 1;
+}
+#form.valid #inputBox:before,
+#form.valid2 #inputBox2:before {
+  content: "";
+  position: absolute;
+  left: 56%;
+  width: 24px;
+  height: 24px;
+  background: url("../img/valid.png");
+  background-size: cover;
+  z-index: 1000;
+}
+
+@media only screen and (max-width: 1148px) {
+  #form.invalid #inputBox:before,
+  #form.invalid2 #inputBox2:before {
+    content: "";
+    position: absolute;
+    left: 58%;
+    width: 24px;
+    height: 24px;
+    background: url("../../Images/invalid.png");
+    background-size: cover;
+    z-index: 1;
+  }
+  #form.valid #inputBox:before,
+  #form.valid2 #inputBox2:before {
+    content: "";
+    position: absolute;
+    left: 58%;
+    width: 24px;
+    height: 24px;
+    background: url("../../Images/valid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+  #text,
+  #text_1,
+  #text_2,
+  #text_3,
+  #text_4 {
+    display: block;
+    color: #000;
+    font-weight: 400;
+    font-style: italic;
+    padding: 5px;
+
+    position: absolute;
+    top: 105%;
+    left: 42%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #form.invalid #inputBox:before,
+  #form.invalid2 #inputBox2:before {
+    content: "";
+    position: absolute;
+    left: 59%;
+    width: 24px;
+    height: 24px;
+    background: url("../../Images/invalid.png");
+    background-size: cover;
+    z-index: 1;
+  }
+  #form.valid #inputBox:before,
+  #form.valid2 #inputBox2:before {
+    content: "";
+    position: absolute;
+    left: 59%;
+    width: 24px;
+    height: 24px;
+    background: url("../../Images/valid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+  #text,
+  #text_1,
+  #text_2,
+  #text_3,
+  #text_4 {
+    display: block;
+    color: #000;
+    font-weight: 400;
+    font-style: italic;
+    padding: 5px;
+
+    position: absolute;
+    top: 105%;
+    left: 40%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #form.invalid #inputBox:before,
+  #form.invalid2 #inputBox2:before {
+    content: "";
+    position: absolute;
+    left: 61%;
+    width: 24px;
+    height: 24px;
+    background: url("../../Images/invalid.png");
+    background-size: cover;
+    z-index: 1;
+  }
+  #form.valid #inputBox:before,
+  #form.valid2 #inputBox2:before {
+    content: "";
+    position: absolute;
+    left: 61%;
+    width: 24px;
+    height: 24px;
+    background: url("../../Images/valid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+  #text,
+  #text_1,
+  #text_2,
+  #text_3,
+  #text_4 {
+    display: block;
+    color: #000;
+    font-weight: 400;
+    font-style: italic;
+    padding: 5px;
+
+    position: absolute;
+    top: 105%;
+    left: 39%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #form.invalid #inputBox:before,
+  #form.invalid2 #inputBox2:before {
+    content: "";
+    position: absolute;
+    left: 62%;
+    width: 24px;
+    height: 24px;
+    background: url("../../Images/invalid.png");
+    background-size: cover;
+    z-index: 1;
+  }
+  #form.valid #inputBox:before,
+  #form.valid2 #inputBox2:before {
+    content: "";
+    position: absolute;
+    left: 62%;
+    width: 24px;
+    height: 24px;
+    background: url("../../Images/valid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+  #text,
+  #text_1,
+  #text_2,
+  #text_3,
+  #text_4 {
+    display: block;
+    color: #000;
+    font-weight: 400;
+    font-style: italic;
+    padding: 5px;
+
+    position: absolute;
+    top: 105%;
+    left: 38%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #form.invalid #inputBox:before,
+  #form.invalid2 #inputBox2:before {
+    content: "";
+    position: absolute;
+    left: 94%;
+    top: 57%;
+    width: 24px;
+    height: 24px;
+    background: url("../../Images/invalid.png");
+    background-size: cover;
+
+    z-index: 1;
+  }
+  #form.valid #inputBox:before,
+  #form.valid2 #inputBox2:before {
+    content: "";
+    position: absolute;
+    top: 57%;
+    left: 94%;
+    width: 24px;
+    height: 24px;
+    background: url("../../Images/valid.png");
+    background-size: cover;
+    z-index: 1000;
+  }
+  #text,
+  #text_1,
+  #text_2,
+  #text_3,
+  #text_4 {
+    display: block;
+    color: #000;
+    font-weight: 400;
+    font-style: italic;
+    padding: 5px;
+
+    position: absolute;
+    top: 105%;
+    left: 0;
+  }
+  .show {
+    position: absolute;
+    margin-left: 92%;
+    bottom: 15%;
+    font-size: 12px;
+    font-weight: 900;
+    user-select: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: none;
+  }
+}

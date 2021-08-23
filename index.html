@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Password Check</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+<link rel="stylesheet" href="css/main.css">
+   
+</head>
+<body>
+    <form action="#" id="form" >
+        <div class="form-inline mt-5 mb-5 justify-content-center d-flex" id="inputBox4">
+         <label for="username"><i class="fas fa-user prefix red-text"></i></label>&nbsp;&nbsp;&nbsp;
+         <input type="text" class="form-control" placeholder="Username" id="username" onkeyup="name_valid()" onclick="return name_valid()"  required>
+         <span id="text_1"></span>
+       </div>
+
+
+       <div class="form-inline mt-5 mb-5 justify-content-center d-flex" id="inputBox5">
+        <label for="phone"><i class="fas fa-phone-alt prefix red-text"></i></label>&nbsp;&nbsp;&nbsp;
+        <input type="tel" class="form-control" placeholder="+8801XXXXXXXXX" id="phone" onkeyup="phone_valid()" onclick="return phone_valid()"  required>
+        <span id="text_4"></span>
+      </div>
+
+
+       <div class="form-inline mb-5 justify-content-center" id="inputBox">
+         <label for="email"><i class="fas fa-envelope prefix red-text"></i></label>&nbsp;&nbsp;&nbsp;
+         <input type="email" class="form-control " placeholder="Enter email" id="email" onclick="return validation()" onkeyup="validation()" required>
+         <span class="" id="text_2"></span>
+       </div>
+       
+      
+
+
+       <div class="form-inline justify-content-center d-flex mb-5" id="inputBox2">
+         <label for="pwd"><i class="fas fa-lock prefix grey-text"></i></label>&nbsp;&nbsp;&nbsp;
+         <input onkeyup="active()" type="password" class="form-control" placeholder="Enter password" id="pwd" onkeypress="pass()" onclick="return pass()" required>
+         <span id="text_3"></span>
+       </div>
+
+
+       <div class="form-inline justify-content-center d-flex mb-3" id="inputBox3">
+         <label for="pwd"><i class="fas fa-lock-alt prefix grey-text"></i></label>&nbsp;&nbsp;&nbsp;
+         <input onkeyup="active_2()" type="password" class="form-control" placeholder="Confirm password" id="cpwd" required>
+         <span id="text"></span>
+
+         <div class="show ">Show</div>
+          
+        
+       </div>
+      
+       <div class="form-group form-check d-flex justify-content-center mt-5">
+         <label class="form-check-label">
+           <input class="form-check-input " type="checkbox">&nbsp;&nbsp; Remember me
+         </label>
+       </div>
+
+
+       <div class="justify-content-center d-flex">
+         <button type="submit" id="btn" class="btn btn-info" disabled>Sing Up</button>
+         <button type="reset" class="btn btn-info ml-3 ">Reset</button>
+       </div>
+     </form>
+
+    <script src="js/main.js"></script>
+
+ 
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+    
+     <script>
+       $("#btn").click(function(){
+         const username = $("#username").val();
+         const phone = $("#phone").val();
+         const email = $("#email").val();
+         const pwd = $("#pwd").val();
+         const cpwd = $("#cpwd").val();
+
+         const name_pattern = /^([a-z]\d*){5,12}$/i;
+         const phone_pattern = /^(\+88)?-?01[1-9]\d{8}$/;
+         const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+         const password2 = /^[^]{8,20}$/;
+
+         if(username.match(name_pattern) && phone.match(phone_pattern) && email.match(pattern) && pwd.match(password2) && cpwd.match(pwd))
+         {
+          swal({
+                    title: "Successfully Submitted",
+                    icon: "success",
+                     button: "OK",
+                     });
+         }
+         else
+         {
+                
+                swal({
+                    title: "Fields Empty!",
+                    text: "Please check the missing field!",
+                     icon: "warning",
+                     button: "OK",
+                         });
+         }
+       })
+     </script>
+
+</body>
+</html>
